@@ -1,1 +1,2 @@
 web: gunicorn wsgi:main
+heroku ps:scale web=1
