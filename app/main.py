@@ -14,15 +14,17 @@ def hello_world():
 def scrapeRoute():
     request_data = request.get_json(force=True)
     url = request_data['url']
-    article = scrape(url)
-    return jsonify(article), 200
+    res = scrape(url)
+    res.headers.add('Access-Control-Allow-Origin', '*')
+    return jsonify(res), 200
 
 # Preprocess Route
 @app.route('/preprocess', methods=['GET'])
 def preprocessRoute():
     request_data = request.get_json(force=True)
     text = request_data['text']
-    preprocess = main(text)
-    return jsonify(preprocess)
+    res = main(text)
+    res.headers.add('Access-Control-Allow-Origin', '*')
+    return jsonify(res)
 
 
