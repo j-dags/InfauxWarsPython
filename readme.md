@@ -4,13 +4,11 @@ Backend server for [Infaux Wars project](https://github.com/j-dags/InfauxWars) b
 
 - Scrape
 - Preprocess
-
-<br>
+  <br>
 
 ### Scrape
 
 Takes a given URL, scrapes the webpage, and returns the main body text of the page.
-
 <br>
 
 ### Preprocess
