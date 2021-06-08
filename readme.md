@@ -5,11 +5,11 @@ Backend server for [Infaux Wars project](https://github.com/j-dags/InfauxWars) b
 - Scrape
 - Preprocess
 
-### Scrape
+## Scrape
 
 Takes a given URL, scrapes the webpage, and returns the main body text of the page.
 
-### Preprocess
+## Preprocess
 
 The goal of this route is to prepare a body of text for our Fake News model. In order to minimize noise in the predictive analysis, the preprocess route will remove all unecessary text: numbers, html tags, contraction, etc.
 
