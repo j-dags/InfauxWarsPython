@@ -20,7 +20,8 @@ def scrapeRoute():
     url = request_data['url']
     res = jsonify(scrape(url))
     # res.headers.add('Access-Control-Allow-Origin', '*')
-    return res, 200
+    # return res, 200
+    return request_data
 
 # Preprocess Route
 @app.route('/preprocess', methods=['GET'])
