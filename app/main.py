@@ -16,6 +16,7 @@ def hello_world():
 @app.route("/scrape", methods=['GET'])
 def scrapeRoute():
     request_data = request.get_json(force=True)
+    print('request_data > ', request_data)
     url = request_data['url']
     res = jsonify(scrape(url))
     # res.headers.add('Access-Control-Allow-Origin', '*')
