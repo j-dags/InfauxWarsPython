@@ -1,11 +1,10 @@
 from flask import Flask, request, jsonify
-# from flask import request
-# from flask import jsonify
 from .scrape import scrape
 from .preprocess import main
 
 app = Flask(__name__)
 
+# Default Route
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
