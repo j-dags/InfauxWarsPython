@@ -18,7 +18,7 @@ def scrapeRoute():
     request_data = request.get_json(force=True)
     url = request_data['url']
     res = jsonify(scrape(url))
-    res.headers.add('Access-Control-Allow-Origin', '*')
+    # res.headers.add('Access-Control-Allow-Origin', '*')
     return res, 200
 
 # Preprocess Route
@@ -27,5 +27,5 @@ def preprocessRoute():
     request_data = request.get_json(force=True)
     text = request_data['text']
     res = jsonify(main(text))
-    res.headers.add('Access-Control-Allow-Origin', '*')
+    # res.headers.add('Access-Control-Allow-Origin', '*')
     return res, 200
