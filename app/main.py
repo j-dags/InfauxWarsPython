@@ -5,7 +5,7 @@ from .scrape import scrape
 from .preprocess import main
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
 # Default Route
 @app.route("/")
