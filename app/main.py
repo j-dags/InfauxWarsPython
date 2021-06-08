@@ -15,19 +15,13 @@ def hello_world():
 # Scrape Route
 @app.route("/scrape", methods=['GET'])
 def scrapeRoute():
-    request_data = request.get_json(force=True)
-    print('request_data > ', request_data)
-    url = request_data['url']
+    url = request.args.get('url')
     res = jsonify(scrape(url))
-    # res.headers.add('Access-Control-Allow-Origin', '*')
-    # return res, 200
-    return request_data
+    return res
 
 # Preprocess Route
 @app.route('/preprocess', methods=['GET'])
 def preprocessRoute():
-    request_data = request.get_json(force=True)
-    text = request_data['text']
+    text = request.args.get('text')
     res = jsonify(main(text))
-    # res.headers.add('Access-Control-Allow-Origin', '*')
     return res, 200
